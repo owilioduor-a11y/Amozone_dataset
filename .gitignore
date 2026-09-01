@@ -1,0 +1,93 @@
+# =============================================================================
+# Security-First .gitignore — Amazon Sales Dataset Pipeline
+# =============================================================================
+# Golden rules enforced by this file:
+#   1. NEVER commit secrets, tokens, or credentials.
+#   2. NEVER commit raw or large datasets (Kaggle ToS also forbids it).
+#   3. NEVER commit machine-generated artifacts that can be rebuilt by the
+#      pipeline scripts (keep the repository small, reproducible, and clean).
+# =============================================================================
+
+# ── 1. Secrets & credentials ─────────────────────────────────────────────────
+# Everything that could authenticate, sign, or expose a system.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*token*.json
+credentials*.json
+service-account*.json
+.secrets/
+.aws/
+.gcloud/
+.azure/
+ssh_config
+
+# ── 2. Raw & large datasets ──────────────────────────────────────────────────
+# amazon.csv is ~4.7 MB and licensed by Kaggle for local use only. All files
+# under data/ are derived (regenerate them with: python 01_eda_and_cleaning.py).
+amazon.csv
+data/
+*.zip
+*.gz
+*.7z
+*.parquet
+*.feather
+*.h5
+
+# ── 3. Regenerable / bulky ML intermediates ──────────────────────────────────
+# Kept out of version control; every artifact here is rebuilt by module #3.
+outputs/ml/products_feature_engineered.csv
+outputs/ml/*_predictions.csv
+
+# NOTE: outputs/figures/*.png and the small metrics/importance tables under
+# outputs/eda/ and outputs/ml/ ARE intentionally tracked — the README embeds
+# the figures and the report references the tables.
+
+# ── 4. Python bytecode & packaging artifacts ─────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
+
+# ── 5. Virtual environments ──────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# ── 6. Tooling, test & security-scan caches ─────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+bandit_report.json
+bandit_report.txt
+pip-audit-report.*
+
+# ── 7. IDE / editor / operating-system noise ─────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ── 8. Ad-hoc logs, scratch files & notebooks output ─────────────────────────
+*.log
+*.tmp
+_*.txt
+.ipynb_checkpoints/

@@ -1,0 +1,6 @@
+price_tier,product_count,avg_actual_price,avg_discounted_price,avg_discount,avg_rating,avg_rating_count
+Budget (<500),183,361.57,194.96,0.4,4.07,12580.77
+Value (500-1.5k),431,987.86,446.23,0.54,4.09,21886.88
+Mid-Range (1.5k-5k),430,2738.14,1441.35,0.47,4.08,18086.82
+Premium (5k-20k),213,10749.8,5745.16,0.48,4.09,18736.97
+Luxury (>20k),95,38461.35,24265.3,0.36,4.23,13688.02

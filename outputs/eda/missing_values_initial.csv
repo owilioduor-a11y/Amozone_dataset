@@ -1,0 +1,17 @@
+column,missing_count,missing_pct
+product_id,0,0.0
+product_name,0,0.0
+category,0,0.0
+discounted_price,0,0.0
+actual_price,0,0.0
+discount_percentage,0,0.0
+rating,0,0.0
+rating_count,2,0.14
+about_product,0,0.0
+user_id,0,0.0
+user_name,0,0.0
+review_id,0,0.0
+review_title,0,0.0
+review_content,0,0.0
+img_link,0,0.0
+product_link,0,0.0

@@ -1,0 +1,6 @@
+,discounted_price,actual_price,discount_percentage,rating,rating_count
+discounted_price,1.0,0.9619,-0.2424,0.1203,-0.0273
+actual_price,0.9619,1.0,-0.1181,0.1216,-0.0361
+discount_percentage,-0.2424,-0.1181,1.0,-0.1554,0.0117
+rating,0.1203,0.1216,-0.1554,1.0,0.1022
+rating_count,-0.0273,-0.0361,0.0117,0.1022,1.0

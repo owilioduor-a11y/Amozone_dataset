@@ -1,0 +1,33 @@
+{
+  "random_seed": 42,
+  "test_size": 0.2,
+  "cv_folds": 3,
+  "n_iter_search": 15,
+  "results": [
+    {
+      "task": "regression",
+      "champion_baseline": "Ridge",
+      "cv_score": -0.1193066747665426,
+      "tuned_metrics": {
+        "RMSE": 534.61,
+        "MAE": 186.93,
+        "R2": 0.9959,
+        "MAPE_%": 8.73
+      },
+      "test_rows": 271
+    },
+    {
+      "task": "classification",
+      "champion_baseline": "RandomForest",
+      "cv_score": 0.7829019261758955,
+      "tuned_metrics": {
+        "Accuracy": 0.7741,
+        "Precision": 0.8558,
+        "Recall": 0.6593,
+        "F1": 0.7448,
+        "ROC_AUC": 0.856
+      },
+      "test_rows": 270
+    }
+  ]
+}
