@@ -1,0 +1,28 @@
+# ============================================================================
+# Amazon Sales Dataset Pipeline — runtime dependencies
+# Validated on Python 3.10+ (reference environment: Python 3.13.9 / Win64).
+# Install with:  pip install -r requirements.txt
+# Audit with:    pip-audit -r requirements.txt --strict
+# ============================================================================
+
+# Data handling & numerics
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+
+# Machine learning
+scikit-learn>=1.4        # SimpleImputer / ColumnTransformer / sparse OHE
+xgboost>=2.0
+lightgbm>=4.3
+
+# NLP & sentiment scoring
+nltk>=3.9                # VADER sentiment (raw-text scoring)
+textblob>=0.18           # polarity cross-check
+
+# Visualization (300-DPI PNG export, headless "Agg" backend)
+matplotlib>=3.8
+seaborn>=0.13
+
+# ---- Dev / security tooling (optional, not needed to run the pipeline) ----
+# bandit>=1.8             # static security analysis:  bandit -r . --exclude data,outputs
+# pip-audit>=2.7          # dependency vulnerability audit:  pip-audit -r requirements.txt
