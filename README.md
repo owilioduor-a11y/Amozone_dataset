@@ -27,7 +27,7 @@ A production-grade, **three-stage modular pipeline** that ingests the public Kag
 10. [Machine Learning Performance Benchmark](#10-machine-learning-performance-benchmark)
 11. [License & Security Contact](#11-license--security-contact)
 
-> ℹ️ The numbered headings below mirror this table of contents. Badges are repository-static shields; wire them to CI (GitHub Actions) for live status if you fork this project into an organisation.
+>The numbered headings below mirror this table of contents. Badges are repository-static shields; wire them to CI (GitHub Actions) for live status if you fork this project into an organisation.
 
 ---
 
@@ -468,61 +468,3 @@ Two supervised ML tasks are trained and evaluated in `03_ml_model_training.py`. 
 > 🔑 **Key insight:** The tuned Random Forest trades a small amount of AUC (0.885 → 0.856) for a meaningful gain in Precision (0.825 → 0.856) and Recall (0.630 → 0.659), resulting in the best balanced F1 score. This reflects successful `RandomizedSearchCV` exploration of `max_depth`, `n_estimators`, and `min_samples_leaf` hyperparameters.
 
 ### Feature Importance Summary
-
-| Task | Top Non-Binary Features |
-|------|------------------------|
-| Regression (`discounted_price`) | 1. `actual_price_log` (1.32), 2. `discount_percentage` (0.44), 3. `about_product_length` (0.15), 4. `review_sentiment_vader` (0.19), 5. `review_text_length` (0.14) |
-| Classification (`high_demand`) | 1. `review_text_length`, 2. `rating`, 3. `review_sentiment_vader`, 4. `discount_percentage`, 5. TF-IDF `headphone` token |
-
----
-
-## 11. License & Security Contact
-
-### License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for the full text. In summary:
-
-- ✅ Free for commercial and non-commercial use.
-- ✅ Modification is permitted.
-- ✅ No warranty is provided (software is provided "as is").
-- ✅ The underlying **Amazon Sales Dataset** from Kaggle is subject to its own license; ensure compliance with Kaggle's dataset terms if you redistribute derivative data.
-
-```
-MIT License
-
-Copyright (c) 2026 Amazon Sales Pipeline Contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND...
-```
-
-### Security Reporting
-
-If you discover a security vulnerability in this repository — including but not limited to:
-
-- Hardcoded credentials or secrets
-- Dependency vulnerabilities not caught by `pip-audit`
-- Input validation bypasses that could lead to arbitrary code execution
-- Data exposure issues in generated artifacts
-
-Please report it **responsibly**:
-
-1. **Email:** `security@amazon-sales-pipeline.local` (replace with a real contact if you fork this project)
-2. **Subject line:** `[SECURITY REPORT] Amazon Sales Pipeline — <brief description>`
-3. **Include:** (a) a description of the vulnerability, (b) steps to reproduce, (c) affected file(s) and line numbers, (d) your preferred method of acknowledgement (or "anonymous").
-4. **Do NOT** open a public GitHub issue for security-sensitive reports.
-
-All valid security reports will receive a response within **72 hours** and will be prioritised for resolution in the next patch release. Contributors who report valid vulnerabilities will be acknowledged in the release notes (unless they request anonymity).
-
----
-
-> 📌 **End of README.md** — For the full technical and business intelligence narrative (including pricing-correlations, customer-sentiment deep-dive, and strategic recommendations), see the companion document: [`DATASET_REPORT.md`](DATASET_REPORT.md).
